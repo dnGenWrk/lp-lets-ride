@@ -1,13 +1,42 @@
+@import "./hero-animations";
 .lp-hero {
   color: $general-cobalt;
+  display: flex;
+  flex-direction: column;
+  @include breakpoint-min($bp-medium) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .lp-hero__content-section {
+    order: 2;
+    @extend .animate-from-left;
+    @include breakpoint-min($bp-medium) {
+      order: 1;
+      width: 33%;
+    }
+  }
+  .lp-hero__media-section {
+    order: 1;
+    @include breakpoint-min($bp-medium) {
+      order: 2;
+      width: 67%;
+    }
+  }
   .lp-hero_top-title {
     margin-bottom: 90px;
+    @extend .animate-title-1;
   }
   .lp-hero__divider {
     height: 4px;
-    width: 320px;
+    //width: 320px;
+    width: 1px;
     background-color: $general-cobalt;
     margin-bottom: 62px;
+    @extend .animate-divider;
+  }
+  .lp-hero__subhead {
+    margin-bottom: 48px;
   }
   .lp-hero__media-section {
     background-image: url(/src/components/hero/img/bg-shape.svg);
@@ -19,7 +48,114 @@
       margin-right: -20px;
     }
     @include breakpoint-min($bp-xlarge) {
-      margin-right: -200px;
+      margin-right: 0;
     }
+  }
+  .lp-hero__buttons-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .lp-hero__buy-now-cta {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    align-items: center;
+    width: 162px;
+    .lp-hero__buy-now-cta__txtblck {
+      margin-left: 14px;
+    }
+    .lp-hero__buy-now-cta-img {
+      img {
+        width: 64px;
+        height: 64px;
+      }
+    }
+    &:hover {
+      text-decoration: underline;
+      .lp-hero__buy-now-cta-img {
+        animation: heartbeat 1.5s ease-in-out infinite both;
+      }
+      .lp-hero__buy-now-cta__txtblck {
+        animation: text-shadow-drop-bottom 0.6s both;
+      }
+    }
+  }
+  .lp-hero__watch-cta-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .lp-hero__watch-text {
+      width: 106px;
+    }
+    .lp-hero__watch-cta {
+      display: block;
+      width: 80px;
+      height: 80px;
+      margin-left: 12px;
+      .lp-hero__buy-watch-img {
+        width: 100%;
+        display: block;
+      }
+      &:hover {
+        .lp-hero__buy-watch-img {
+          animation: rotate-center 0.7s ease-in-out infinite both;
+        }
+      }
+    }
+  }
+}
+
+@keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+    transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+    transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+@keyframes text-shadow-drop-bottom {
+  0% {
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    text-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  }
+}
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
