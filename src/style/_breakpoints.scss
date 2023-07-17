@@ -1,0 +1,37 @@
+// Breakpoints
+$bp-small: 425px;
+$bp-medium: 768px;
+$bp-large: 1024px;
+$bp-xlarge: 1440px;
+
+@mixin breakpoint-min($bp) {
+  @media (min-width: $bp) {
+    @content;
+  }
+}
+
+@mixin breakpoint-max($bp) {
+  @media (max-width: $bp) {
+    @content;
+  }
+}
+
+@mixin breakpoint-min-max($bp1, $bp2) {
+  @media (min-width: $bp1) and (max-width: $bp2) {
+    @content;
+  }
+}
+
+/*
+
+EXAMPLE OF USAGE
+@include breakpoint-min($bp-small) {
+
+}
+@include breakpoint-max($bp-large) {
+
+}
+@include breakpoint-min-max($bp-small, $bp-large) {
+  
+}
+*/

@@ -1,0 +1,25 @@
+.lp-hero {
+  color: $general-cobalt;
+  .lp-hero_top-title {
+    margin-bottom: 90px;
+  }
+  .lp-hero__divider {
+    height: 4px;
+    width: 320px;
+    background-color: $general-cobalt;
+    margin-bottom: 62px;
+  }
+  .lp-hero__media-section {
+    background-image: url(/src/components/hero/img/bg-shape.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    margin-right: -16px;
+    @include breakpoint-min($bp-medium) {
+      margin-right: -20px;
+    }
+    @include breakpoint-min($bp-xlarge) {
+      margin-right: -200px;
+    }
+  }
+}

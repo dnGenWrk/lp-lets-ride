@@ -1,0 +1,32 @@
+:root {
+  font-size: 62.5%;
+  font-family: "Ubuntu", Arial, Helvetica, sans-serif;
+}
+.lp-title-h1 {
+  font-size: 6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  @include breakpoint-min($bp-medium) {
+    font-size: 9rem;
+  }
+}
+
+.lp-title-h2 {
+  font-size: 5rem;
+  font-weight: 700;
+}
+.text-general {
+  font-size: 2rem;
+  font-weight: 400;
+}
+.subhead {
+  font-size: 2rem;
+  font-weight: 400;
+  @include breakpoint-min($bp-medium) {
+    font-size: 2.2rem;
+  }
+}
+.subhead-large {
+  font-size: 3rem;
+  font-weight: 700;
+}
