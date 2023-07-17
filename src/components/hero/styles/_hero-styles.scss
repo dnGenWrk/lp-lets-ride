@@ -22,10 +22,16 @@
       order: 2;
       width: 67%;
     }
+    .dev-img {
+      @extend .animate-hero-img;
+    }
   }
   .lp-hero_top-title {
-    margin-bottom: 90px;
+    margin-bottom: 32px;
     @extend .animate-title-1;
+    @include breakpoint-min($bp-medium) {
+      margin-bottom: 90px;
+    }
   }
   .lp-hero__divider {
     height: 4px;
