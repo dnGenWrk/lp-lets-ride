@@ -2,4 +2,4 @@
 
 Landing Page Let's Ride
 
-### Webpack, Babel, Sass, PostCss, Image optimization.
+### Webpack, Babel, GSAP, Sass, PostCss, Image optimization.
