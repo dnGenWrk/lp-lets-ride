@@ -1,0 +1,44 @@
+.extendedFeatures {
+  .lp-title-h2,
+  .text-general {
+    text-align: center;
+  }
+  .img {
+    width: 100%;
+    display: block;
+  }
+  .product-info {
+    margin-top: 64px;
+    margin-bottom: 64px;
+    @include breakpoint-min($bp-medium) {
+      margin-top: 128px;
+      margin-bottom: 128px;
+    }
+    @include breakpoint-min($bp-large) {
+      margin-top: 256px;
+      margin-bottom: 128px;
+    }
+
+    .product-info__container {
+      @include breakpoint-min($bp-medium) {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 48px;
+      }
+      .product-info__media {
+        margin-bottom: 48px;
+        @include breakpoint-min($bp-medium) {
+          width: 48%;
+          margin-bottom: 0;
+        }
+      }
+      .product-info__content-block {
+        @include breakpoint-min($bp-medium) {
+          width: 40%;
+        }
+      }
+    }
+  }
+}

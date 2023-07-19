@@ -30,3 +30,25 @@
   font-size: 3rem;
   font-weight: 700;
 }
+
+.general-list {
+  list-style-type: none;
+  padding-left: 0;
+  li {
+    background-image: url("../src/components/extendedFeatures/img/f-icon.svg");
+    background-position: 0 0;
+    background-size: 48px 48px;
+    background-repeat: no-repeat;
+    padding-left: 5rem;
+    font-size: 2rem;
+    color: $general-cobalt;
+    min-height: 48px;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 1.8rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
