@@ -1,4 +1,5 @@
 .extendedFeatures {
+  margin-bottom: 56px;
   .lp-title-h2,
   .text-general {
     text-align: center;
@@ -52,6 +53,7 @@
       margin-bottom: 48px;
     }
     .multiple-accessories__content-wrapper {
+      margin-bottom: 56px;
       @include breakpoint-min($bp-medium) {
         display: flex;
         flex-direction: row;
@@ -66,5 +68,38 @@
         display: block;
       }
     }
+  }
+  .cta-container {
+    display: flex;
+    justify-content: center;
+    .cta {
+      padding-left: 32px;
+      padding-right: 32px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      font-size: 1.8rem;
+      font-weight: 500;
+      margin-bottom: 32px;
+      cursor: pointer;
+      background-color: unset;
+      border-radius: 10px;
+      @include breakpoint-min($bp-medium) {
+        padding-left: 64px;
+        padding-right: 64px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        font-size: 3rem;
+        font-weight: 700;
+      }
+      &:hover {
+        background-image: linear-gradient(90deg, #00c0ff 0%, #ffcf00 49%, #fc4f4f 80%, #00c0ff 100%);
+        animation: slidebg 5s linear infinite;
+      }
+    }
+  }
+}
+@keyframes slidebg {
+  to {
+    background-position: 20vw;
   }
 }

@@ -93,7 +93,11 @@
     flex-direction: row;
     align-items: center;
     .lp-hero__watch-text {
+      display: none;
       width: 106px;
+      @include breakpoint-min($bp-medium) {
+        display: block;
+      }
     }
     .lp-hero__watch-cta {
       display: block;
