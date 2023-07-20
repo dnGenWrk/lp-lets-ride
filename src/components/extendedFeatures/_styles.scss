@@ -41,4 +41,30 @@
       }
     }
   }
+  .high-efficiency-motor {
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+  .multiple-accessories {
+    .subtitle {
+      margin-bottom: 48px;
+    }
+    .multiple-accessories__content-wrapper {
+      @include breakpoint-min($bp-medium) {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        .--cnt-wdth {
+          width: 31%;
+        }
+      }
+      img {
+        width: 100%;
+        display: block;
+      }
+    }
+  }
 }
