@@ -11,10 +11,10 @@ body {
 }
 main {
   flex-grow: 1;
+  scroll-behavior: smooth;
 }
 .lp-container {
   width: 100%;
-  //border: 1px solid red;
   padding-left: 16px;
   padding-right: 16px;
   @include breakpoint-min($bp-medium) {
@@ -49,4 +49,13 @@ main {
 }
 .ind-b-30 {
   margin-bottom: 30px;
+}
+
+.copyright-info {
+  background-color: #42454a;
+  color: #fff;
+  font-size: 2rem;
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 60px;
 }
